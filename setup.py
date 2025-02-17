@@ -149,7 +149,7 @@ def run_setup(with_binary, with_openmp, test_xgboost, test_lightgbm, test_catboo
         cmdclass={'build_ext': build_ext},
         setup_requires=['numpy'],
         install_requires=['numpy', 'scipy', 'scikit-learn', 'pandas', 'tqdm>4.25.0',
-                          'packaging>20.9', 'slicer==0.0.7', 'numba', 'cloudpickle', 'psutil', 'shap'],
+                          'packaging>20.9', 'slicer', 'numba', 'cloudpickle', 'psutil', 'shap'],
         extras_require=extras_require,
         ext_modules=ext_modules,
         classifiers=[
@@ -157,10 +157,9 @@ def run_setup(with_binary, with_openmp, test_xgboost, test_lightgbm, test_catboo
             "Operating System :: POSIX",
             "Operating System :: Unix",
             "Operating System :: MacOS",
-            "Programming Language :: Python :: 3.7",
-            "Programming Language :: Python :: 3.8",
-            "Programming Language :: Python :: 3.9",
             "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.12",
         ],
         zip_safe=False
         # python_requires='>3.0' we will add this at some point

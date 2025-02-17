@@ -3,7 +3,7 @@
 import warnings
 import sys
 
-__version__ = '0.1.6'
+__version__ = '0.1.7'
 
 # check python version
 if (sys.version_info < (3, 0)):

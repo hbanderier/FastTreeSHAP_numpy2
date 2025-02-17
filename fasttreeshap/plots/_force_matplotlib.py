@@ -116,7 +116,7 @@ def draw_labels(fig, ax, out_value, features, feature_type, offset_text, total_e
         else:
             text = feature[2] + ' = ' + feature[1]
 
-        if text_rotation is not 0:
+        if text_rotation != 0:
             va_alignment = 'top'
         else:
             va_alignment = 'baseline'
@@ -222,9 +222,11 @@ def format_data(data):
     
     # Define link function
     if data['link'] == 'identity':
-        convert_func = lambda x: x
+        def convert_func(x):
+            return x
     elif data['link'] == 'logit':
-        convert_func = lambda x: 1 / (1 + np.exp(-x))
+        def convert_func(x):
+            return 1 / (1 + np.exp(-x))
     else:
         assert False, "ERROR: Unrecognized link function: " + str(data['link'])
     

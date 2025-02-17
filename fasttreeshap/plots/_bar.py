@@ -6,11 +6,10 @@ except ImportError:
     pass
 from ._labels import labels
 from ..utils import format_value, ordinal_str
-from ._utils import convert_ordering, convert_color, merge_nodes, get_sort_order, sort_inds, dendrogram_coords
+from ._utils import convert_ordering, merge_nodes, get_sort_order, sort_inds, dendrogram_coords
 from . import colors
 import numpy as np
 import scipy
-import copy
 from .. import Explanation, Cohorts
 
 
@@ -211,7 +210,7 @@ def bar(shap_values, max_display=10, order=Explanation.abs, clustering=None, clu
     ax = pl.gca()
     #xticks = ax.get_xticks()
     bbox = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-    width, height = bbox.width, bbox.height
+    width, _height = bbox.width, bbox.height
     bbox_to_xscale = xlen/width
 
     for i in range(len(values)):

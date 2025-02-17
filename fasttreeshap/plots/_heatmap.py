@@ -7,7 +7,7 @@ except ImportError:
 from . import colors
 from .. import Explanation
 from ..utils import OpChain
-from ._utils import convert_ordering, convert_color
+from ._utils import convert_ordering
 
 def heatmap(shap_values, instance_order=Explanation.hclust(), feature_values=Explanation.abs.mean(0), 
             feature_order=None, max_display=10, cmap=colors.red_white_blue, show=True):

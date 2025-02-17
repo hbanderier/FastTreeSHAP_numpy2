@@ -1,7 +1,6 @@
 import numpy as np
 import warnings
 import json
-import numpy as np
 from ..utils import ordinal_str
 import random
 import string
